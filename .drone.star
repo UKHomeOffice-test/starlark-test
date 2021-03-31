@@ -26,11 +26,11 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 50,
-                "memory": "50Mib"
+                "cpu": 150,
+                "memory": "250Mib"
             },
             "limits": {
-                "cpu": 100,
+                "cpu": 300,
                 "memory": "300Mib"
             }
         },
