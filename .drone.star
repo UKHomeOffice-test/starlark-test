@@ -41,16 +41,6 @@ def main(ctx):
       {
         "name": "stage-3",
         "image": "alpine",
-        "resources": {
-            "requests": {
-                "cpu": 100,
-                "memory": "200Mib"
-            },
-            "limits": {
-                "cpu": 300,
-                "memory": "500Mib"
-            }
-        },
         "commands": [
             "sleep 300"
         ]
