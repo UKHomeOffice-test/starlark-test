@@ -9,7 +9,7 @@ def main(ctx):
         "name": "stage-1",
         "image": "alpine",
         "commands": [
-            "sleep 120"
+            "sleep 60"
         ]
       },
       {
@@ -18,16 +18,16 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 1.1,
-                "memory": "7Mib"
+                "cpu": 0.9,
+                "memory": "3Mib"
             },
             "limits": {
-                "cpu": 2.2,
-                "memory": "14Mib"
+                "cpu": 1,
+                "memory": "10Mib"
             }
         },
         "commands": [
-            "sleep 120"
+            "sleep 60"
         ]
       },
       {
@@ -36,16 +36,16 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 3,
-                "memory": "16Mib"
+                "cpu": 1,
+                "memory": "10Mib"
             },
             "limits": {
-                "cpu": 6,
-                "memory": "32Mib"
+                "cpu": 10,
+                "memory": "20Mib"
             }
         },
         "commands": [
-            "sleep 120"
+            "sleep 60"
         ]
       },
       {
@@ -63,7 +63,7 @@ def main(ctx):
             }
         },
         "commands": [
-            "sleep 120"
+            "sleep 60"
         ]
       }
     ]
