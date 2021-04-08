@@ -18,12 +18,12 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 0.9,
-                "memory": "3Mib"
+                "cpu": 1.1,
+                "memory": "7Mib"
             },
             "limits": {
-                "cpu": 1,
-                "memory": "10Mib"
+                "cpu": 2.2,
+                "memory": "14Mib"
             }
         },
         "commands": [
@@ -36,12 +36,12 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 10,
-                "memory": "10Mib"
+                "cpu": 3,
+                "memory": "16Mib"
             },
             "limits": {
-                "cpu": 20,
-                "memory": "20Mib"
+                "cpu": 6,
+                "memory": "32Mib"
             }
         },
         "commands": [
