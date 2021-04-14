@@ -37,11 +37,11 @@ def main(ctx):
         "resources": {
             "requests": {
                 "cpu": 3,
-                "memory": "6Mib"
+                "memory": "8Mib"
             },
             "limits": {
                 "cpu": 6,
-                "memory": "12Mib"
+                "memory": "16Mib"
             }
         },
         "commands": [
@@ -54,11 +54,11 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 4,
+                "cpu": 8,
                 "memory": "20Mib"
             },
             "limits": {
-                "cpu": 8,
+                "cpu": 12,
                 "memory": "40Mib"
             }
         },
@@ -68,4 +68,3 @@ def main(ctx):
       }
     ]
   }
-  
