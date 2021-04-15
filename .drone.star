@@ -18,8 +18,8 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 2,
-                "memory": "10Mib"
+                "cpu": 0.5,
+                "memory": "3Mib"
             },
             "limits": {
                 "cpu": 3,
@@ -36,8 +36,8 @@ def main(ctx):
         "image": "alpine",
         "resources": {
             "requests": {
-                "cpu": 10,
-                "memory": "40Mib"
+                "cpu": 8,
+                "memory": "30Mib"
             },
             "limits": {
                 "cpu": 200,
