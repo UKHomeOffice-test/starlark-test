@@ -10,17 +10,19 @@ platform:
 steps:
 - name: run_tests
   image: python:3.9.2
-  environment:
-    DRONE_RESOURCE_REQUEST_CPU: 1000
-    DRONE_RESOURCE_REQUEST_MEMORY: 200
+  resources:
+  request:
+    cpu: 1000
+    memory: 200MiB
   commands:
   - sleep 1020
   - python -c "print('sleep over')"
 
 - name: step_2
   image: python:3.9.2
-  environment:
-    DRONE_RESOURCE_REQUEST_CPU: 1008
-    DRONE_RESOURCE_REQUEST_MEMORY: 208
+  resources:
+  request:
+    cpu: 1007
+    memory: 207MiB
   commands:
   - python -c "print('step 2 begins')
