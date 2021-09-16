@@ -20,7 +20,7 @@ steps:
 - name: step_2
   image: python:3.9.2
   environment:
-    DRONE_RESOURCE_REQUEST_CPU: 1007
-    DRONE_RESOURCE_REQUEST_MEMORY: 207
+    DRONE_RESOURCE_REQUEST_CPU: 1008
+    DRONE_RESOURCE_REQUEST_MEMORY: 208
   commands:
   - python -c "print('step 2 begins')
