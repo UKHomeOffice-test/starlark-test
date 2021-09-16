@@ -1,0 +1,26 @@
+---
+kind: pipeline
+name: default
+type: kubernetes
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: run_tests
+  image: python:3.9.2
+  environment:
+    DRONE_RESOURCE_REQUEST_CPU: 1000
+    DRONE_RESOURCE_REQUEST_MEMORY: 200
+  commands:
+  - sleep 1020
+  - python -c "print('sleep over')"
+
+- name: step_2
+  image: python:3.9.2
+  environment:
+    DRONE_RESOURCE_REQUEST_CPU: 1007
+    DRONE_RESOURCE_REQUEST_MEMORY: 207
+  commands:
+  - python -c "print('step 2 begins')
