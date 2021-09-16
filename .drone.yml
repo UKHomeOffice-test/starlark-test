@@ -1,25 +1,29 @@
----
 kind: pipeline
-name: default
 type: kubernetes
 
+# resource requests are defined on the pipeline level
 resources:
   request:
-    cpu: 1000
-    memory: 200MiB
-
-platform:
-  os: linux
-  arch: amd64
+    cpu: 2000
+    memory: 2000MiB
 
 steps:
-- name: run_tests
-  image: python:3.9.2
-  commands:
-  - sleep 1020
-  - python -c "print('sleep over')"
+  - name: en
+    image: alpine
+    commands:
+      - echo hello
+    resources:
+      # resource limits are defined for each step
+      limit:
+        cpu: 1000
+        memory: 1000MiB
 
-- name: step_2
-  image: python:3.9.2
-  commands:
-  - python -c "print('step 2 begins')
+  - name: es
+    image: alpine
+    commands:
+      - echo hola
+
+  - name: fr
+    image: alpine
+    commands:
+      - echo bonjour
