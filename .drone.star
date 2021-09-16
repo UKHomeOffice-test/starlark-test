@@ -16,6 +16,16 @@ def main(ctx):
         # Step 2, requests are lower than a MIN request amount
         "name": "stage-2",
         "image": "alpine",
+        "resources": {
+            "requests": {
+                "cpu": 1000,
+                "memory": "200Mib"
+            },
+            "limits": {
+                "cpu": 1007,
+                "memory": "207Mib"
+            }
+        },
         "commands": [
             "sleep 60"
         ]
