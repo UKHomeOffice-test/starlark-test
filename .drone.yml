@@ -6,7 +6,10 @@ resources:
   request:
     cpu: 2000
     memory: 2000MiB
-
+  limit:
+    cpu: 4000
+    memory: 4000MiB
+   
 steps:
   - name: en
     image: alpine
@@ -14,12 +17,23 @@ steps:
       - echo hello
     resources:
       # resource limits are defined for each step
+      request:
+        cpu: 50
+        memory: 50MiB
       limit:
-        cpu: 1000
-        memory: 1000MiB
+        cpu: 100
+        memory: 100MiB
 
   - name: es
     image: alpine
+    resources:
+      # resource limits are defined for each step
+      request:
+        cpu: 3000
+        memory: 300MiB
+      limit:
+        cpu: 5000
+        memory: 500MiB
     commands:
       - echo hola
 
