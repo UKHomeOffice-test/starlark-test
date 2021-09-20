@@ -9,6 +9,10 @@ resources:
 steps:
   - name: en
     image: alpine
+    resources:
+      limit:
+        cpu: 1000
+        memory: 1000MiB
     commands:
       - echo hello
 
