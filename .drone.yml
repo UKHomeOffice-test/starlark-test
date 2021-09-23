@@ -2,7 +2,7 @@ kind: pipeline
 type: kubernetes
 
 resources:
-  request:
+  requests:
     cpu: 2000
     memory: 2000MiB
 
@@ -10,7 +10,7 @@ steps:
   - name: en
     image: alpine
     resources:
-      limit:
+      limits:
         cpu: 1000
         memory: 1000MiB
     commands:
