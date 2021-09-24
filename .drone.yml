@@ -14,14 +14,21 @@ steps:
         cpu: 1000
         memory: 1000MiB
     commands:
+      - sleep 500
       - echo hello
 
   - name: es
     image: alpine
+    resources:
+      requests:
+        cpu: 1000
+        memory: 1000MiB
     commands:
+      - sleep 500
       - echo hola
 
   - name: fr
     image: alpine
     commands:
+      - sleep 500
       - echo bonjour
