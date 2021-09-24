@@ -1,28 +1,24 @@
 kind: pipeline
 type: kubernetes
 
-resources:
-  requests:
-    cpu: 2000
-    memory: 2000MiB
+# resources:
+#   requests:
+#     cpu: 2000
+#     memory: 2000MiB
 
 steps:
   - name: en
     image: alpine
-    resources:
-      limits:
-        cpu: 1000
-        memory: 1000MiB
+#     resources:
+#       limits:
+#         cpu: 1000
+#         memory: 1000MiB
     commands:
       - sleep 500
       - echo hello
 
   - name: es
     image: alpine
-    resources:
-      requests:
-        cpu: 1000
-        memory: 1000MiB
     commands:
       - sleep 500
       - echo hola
