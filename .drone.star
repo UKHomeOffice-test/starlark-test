@@ -8,7 +8,7 @@ def main(ctx):
         "name": "build",
         "image": "alpine",
         "commands": [
-            "echo hello world"
+            "echo hello world!"
         ]
       }
     ]
